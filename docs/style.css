@@ -1,20 +1,125 @@
-/* Adaptation fidèle de l'architecture de la fiche L'Optique du Béal. */
-:root { color-scheme:light; background:#f8f3e7; }
-*,*::before,*::after { box-sizing:border-box; }
-html { margin:0; min-height:100%; -webkit-text-size-adjust:100%; }
-body { margin:0; min-height:100vh; min-height:100svh; background:#f8f3e7; color:#24391f; }
-#application { width:100%; min-height:100vh; min-height:100svh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding-block:10px 18px; }
-.stage { position:relative; width:100%; max-width:560px; margin-inline:auto; aspect-ratio:9/16; }
-.poster { display:block; width:100%; height:auto; pointer-events:none; user-select:none; -webkit-user-drag:none; }
-.contact-hotspot { position:absolute; left:7.407407%; width:85.185185%; height:6.510417%; border-radius:clamp(14px,4.3vw,38px); background:transparent; cursor:pointer; -webkit-tap-highlight-color:#ffffff24; touch-action:manipulation; }
-.email { top:42.96875%; }
-.site { top:50.520833%; }
-.facebook { top:58.072917%; }
-.instagram { top:65.625%; }
-.whatsapp { top:73.177083%; }
-.phone { top:80.729167%; }
-.contact-hotspot:focus-visible { outline:3px solid #fff; outline-offset:-6px; box-shadow:0 0 0 3px #24391f; }
-.contact-hotspot:active { background:#ffffff13; }
-.visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-@media(min-width:600px) { .stage { width:calc((100svh - 28px) * 9 / 16); min-width:min(340px,100%); max-width:560px; } }
-@media(prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; } }
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #263829;
+  background: #f7f4e9;
+  --cream: #f7f4e9;
+  --green-dark: #355d2d;
+  --gold: #b6a62b;
+  --line: #dedccf;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 22px 15px 28px;
+  background: linear-gradient(180deg, #fbf9f1 0%, #f2f0e5 100%);
+}
+.page { width: min(100%, 490px); margin: 0 auto; }
+.intro { text-align: center; margin-bottom: 22px; }
+.logo {
+  padding: 14px 17px;
+  border: 1px solid #e3e1d6;
+  border-radius: 19px;
+  background: rgba(255,255,255,.88);
+  box-shadow: 0 6px 24px rgba(45,58,40,.07);
+}
+.logo img { display:block; width:100%; height:auto; object-fit:contain; }
+.eyebrow {
+  margin: 20px 0 7px;
+  color: #3f5741;
+  font-weight: 800;
+  font-size: 10.5px;
+  letter-spacing: .13em;
+}
+h1 {
+  margin: 0;
+  color: #315d35;
+  font-size: clamp(25px, 7vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -.03em;
+}
+.location { margin: 8px 0 0; font-size: 14px; color:#5f6c60; }
+.contacts { display: grid; gap: 11px; }
+.contact {
+  display: grid;
+  grid-template-columns: 43px minmax(0, 1fr) 12px;
+  align-items: center;
+  gap: 13px;
+  min-height: 76px;
+  padding: 11px 17px;
+  border-radius: 17px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 5px 13px rgba(44,50,40,.08);
+  transition: filter .15s ease, transform .15s ease;
+}
+.contact:hover { filter: brightness(1.05); }
+.contact:active { transform: scale(.988); }
+.contact:focus-visible { outline: 3px solid #3a5d3d; outline-offset: 3px; }
+.email { background: linear-gradient(120deg, #315c2b, #4b702f); }
+.site { background: linear-gradient(120deg, #aa9827, #c4ad33); }
+.facebook { background: linear-gradient(120deg, #1165c2, #2485dc); }
+.instagram { background: linear-gradient(120deg, #f1a52b 0%, #e84788 48%, #b41ed8 100%); }
+.whatsapp { background: linear-gradient(120deg, #1c9850, #36b766); }
+.phone {
+  color: #31533a;
+  background: rgba(255,255,255,.92);
+  border: 1px solid #d9ddd2;
+  box-shadow: 0 4px 13px rgba(44,50,40,.05);
+}
+.icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.20);
+  font-size: 25px;
+  font-weight: 800;
+}
+.phone .icon { background:#edf2e9; color:#47704c; }
+.icon svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.icon.brand { font-family:Arial,sans-serif; font-size:30px; }
+.instagram-icon svg { width:27px; height:27px; }
+.label strong,.label small { display:block; line-height:1.28; overflow-wrap:anywhere; }
+.label strong { font-size:16px; }
+.label small { margin-top:3px; font-size:12.5px; opacity:.94; }
+.chevron { width:9px; height:9px; transform:rotate(45deg); border-top:2.5px solid; border-right:2.5px solid; }
+.soon {
+  margin: 26px 0 17px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #4f584d;
+}
+footer {
+  padding-top: 14px;
+  text-align: center;
+  color:#707a6d;
+  font-size:11.5px;
+}
+footer::before {
+  content:"";
+  display:block;
+  width:52px;
+  height:2px;
+  margin:0 auto 12px;
+  border-radius:3px;
+  background:#b69c30;
+}
+@media (max-width:360px) {
+  .contact { grid-template-columns: 39px minmax(0,1fr) 10px; padding-inline:12px; gap:10px; min-height:70px; }
+  .icon { width:39px; height:39px; }
+  .label strong { font-size:14.5px; }
+  .eyebrow { letter-spacing:.08em; }
+}
+@media (prefers-reduced-motion:reduce) { .contact { transition:none; } }

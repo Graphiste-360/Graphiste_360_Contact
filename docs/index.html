@@ -2,36 +2,57 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#f8f3e7">
-  <meta name="color-scheme" content="light">
-  <meta name="description" content="Graphiste 360° · Papeterie Multi-Services à Vence : site, e-mail, Facebook, Instagram, WhatsApp et téléphone.">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Graphiste 360°">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <title>Graphiste 360° — Nos contacts</title>
-  <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="icon" href="./assets/icone.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" sizes="180x180" href="./app-icon-180.png">
-  <link rel="preload" href="./assets/visuel-contact.png" as="image" type="image/png">
-  <link rel="stylesheet" href="./style.css?v=3-beal-fidele">
-  <script src="./coordonnees.js?v=3-beal-fidele" defer></script>
-  <script src="./application.js?v=3-beal-fidele" defer></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f4e9">
+  <meta name="description" content="Contacter Graphiste 360° et Papeterie Multi-Services à Vence : e-mail, site internet, Facebook, Instagram, WhatsApp et téléphone.">
+  <title>Graphiste 360° · Papeterie Multi-Services</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <main id="application">
-    <h1 class="visually-hidden">Graphiste 360° — Papeterie Multi-Services — Nous contacter</h1>
-    <div class="stage">
-      <img class="poster" src="./assets/visuel-contact.png" width="864" height="1536" alt="" aria-hidden="true" draggable="false" fetchpriority="high">
-      <nav aria-label="Contacter Graphiste 360° et Papeterie Multi-Services">
-        <a class="contact-hotspot email" data-contact="email" href="mailto:papeterie.multiservices@yahoo.fr" aria-label="Envoyer un e-mail"><span class="visually-hidden">Envoyer un e-mail</span></a>
-        <a class="contact-hotspot site" data-contact="site" href="https://www.papeterie-francaise.com/" target="_blank" rel="noopener noreferrer" aria-label="Visiter le site internet"><span class="visually-hidden">Visiter notre site internet</span></a>
-        <a class="contact-hotspot facebook" data-contact="facebook" href="https://www.facebook.com/papeteriemultiservices?locale=fr_FR" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir Facebook"><span class="visually-hidden">Notre page Facebook</span></a>
-        <a class="contact-hotspot instagram" data-contact="instagram" href="https://www.instagram.com/papeterie_multiservices/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir Instagram"><span class="visually-hidden">Notre compte Instagram</span></a>
-        <a class="contact-hotspot whatsapp" data-contact="whatsapp" href="https://wa.me/33686981883" target="_blank" rel="noopener noreferrer" aria-label="Écrire sur WhatsApp"><span class="visually-hidden">Écrire sur WhatsApp</span></a>
-        <a class="contact-hotspot phone" data-contact="phone" href="tel:+33686981883" aria-label="Nous appeler"><span class="visually-hidden">Nous appeler</span></a>
-      </nav>
-    </div>
+  <main class="page">
+    <header class="intro">
+      <div class="logo">
+        <img src="./assets/logo-graphiste-360.png" width="1050" height="344" alt="Graphiste 360°">
+      </div>
+      <p class="eyebrow">CRÉATION · IMPRESSION · SITES INTERNET · PERSONNALISATION</p>
+      <h1>Papeterie Multi-Services</h1>
+      <p class="location">Vence · Alpes-Maritimes</p>
+    </header>
+
+    <nav class="contacts" aria-label="Contacter Graphiste 360°">
+      <a class="contact email" href="mailto:papeterie.multiservices@yahoo.fr">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>
+        <span class="label"><strong>Envoyer un e-mail</strong><small>papeterie.multiservices@yahoo.fr</small></span><span class="chevron" aria-hidden="true"></span>
+      </a>
+
+      <a class="contact site" href="https://www.papeterie-francaise.com/" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18z"/></svg></span>
+        <span class="label"><strong>Visiter notre site internet</strong><small>www.papeterie-francaise.com</small></span><span class="chevron" aria-hidden="true"></span>
+      </a>
+
+      <a class="contact facebook" href="https://www.facebook.com/papeteriemultiservices?locale=fr_FR" target="_blank" rel="noopener">
+        <span class="icon brand" aria-hidden="true">f</span>
+        <span class="label"><strong>Notre page Facebook</strong><small>Papeterie Multi-Services</small></span><span class="chevron" aria-hidden="true"></span>
+      </a>
+
+      <a class="contact instagram" href="https://www.instagram.com/papeterie_multiservices/" target="_blank" rel="noopener">
+        <span class="icon instagram-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg></span>
+        <span class="label"><strong>Notre compte Instagram</strong><small>@papeterie_multiservices</small></span><span class="chevron" aria-hidden="true"></span>
+      </a>
+
+      <a class="contact whatsapp" href="https://wa.me/33686981883" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 11.5a9 9 0 0 1-13.4 7.8L3 21l1.5-4.8A9 9 0 1 1 21 11.5z"/><path d="m8 7 1.7 3-1 1c1 2 2.3 3.2 4.3 4l1-1 3 1.5c-1 3-4 2-6.5.2C8 14 5 9 8 7z"/></svg></span>
+        <span class="label"><strong>Écrire sur WhatsApp</strong><small>06 86 98 18 83</small></span><span class="chevron" aria-hidden="true"></span>
+      </a>
+
+      <a class="contact phone" href="tel:+33686981883">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 3 4 1 1 4-2 2a12 12 0 0 0 6 6l2-2 4 1 1 4c-2 3-7 1-11-3S2 5 5 3Z"/></svg></span>
+        <span class="label"><strong>Appeler Graphiste 360°</strong><small>06 86 98 18 83</small></span><span class="chevron" aria-hidden="true"></span>
+      </a>
+    </nav>
+
+    <p class="soon">À très bientôt !</p>
+    <footer>Graphiste 360° · Papeterie Multi-Services · Vence</footer>
   </main>
 </body>
 </html>
